@@ -4,3 +4,5 @@ configuration:
   ide_config:
     default_open_files:
       - README.md
+    project_menu:
+        run: ./gradlew build
