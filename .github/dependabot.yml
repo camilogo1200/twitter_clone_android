@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: gradle
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "08:00"
+      timezone: "America/New_York"
+    target-branch: "main"
+    labels: ['dependabot']
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore"
