@@ -1,6 +1,6 @@
 # mParticle Android Takehome Test
 
-This is the skeleton of an Twitter-clone Android app, designed to get you started. 
+This is the skeleton of a Twitter-clone Android app, designed to get you started. 
 
 
 ## Take home Requirements
