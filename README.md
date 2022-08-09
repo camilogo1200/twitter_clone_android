@@ -1,7 +1,6 @@
 # mParticle Android Takehome Test
 
-This is the skeleton of a Twitter-clone Android app, designed to get you started. 
-
+This is the skeleton of a Twitter-clone Android app, designed to get you started.
 
 ## Take home Requirements
 
@@ -17,7 +16,8 @@ Please update the app with all of the following, or anything else that you think
 
 ## Submission
 
-- Please submit your solution via Hackerrank or privately share a git repo. 
+- Unzip the attached git repository to your machine and commit any changes to your local copy of the repository.
+- Submit your solution by emailing back a zipped copy of your local git repository. 
 - Include a write-up of how you would scope out the future of this project (what could come next, improvements you'd make, etc)
 
 ## Questions we'll ask (about your submission in next round)
