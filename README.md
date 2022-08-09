@@ -17,7 +17,7 @@ Please update the app with all of the following, or anything else that you think
 ## Submission
 
 - Unzip the attached git repository to your machine and commit any changes to your local copy of the repository.
-- Submit your solution by emailing back a zipped copy of your local git repository. 
+- Submit your solution by uploading a zipped copy of your local git repository to the shared Goolge Drive folder. 
 - Include a write-up of how you would scope out the future of this project (what could come next, improvements you'd make, etc)
 
 ## Questions we'll ask (about your submission in next round)
