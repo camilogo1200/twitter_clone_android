@@ -1,0 +1,16 @@
+
+<resources>
+    <string name="app_name">mP Twitter Clone</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_list">List</string>
+    <string name="menu_topics">Topics</string>
+    <string name="menu_bookmarks">Bookmarks</string>
+    <string name="menu_moments">Moments</string>
+    <string name="menu_monetisation">Monetisation</string>
+    <string name="menu_twitter_professionals">Twitter for Professionals</string>
+    <string name="menu_settings_privacy">Settings and Privacy</string>
+    <string name="menu_help_center">Help Centre</string>
+    <string name="nav_header_content_desc">Profile image</string>
+    <string name="nav_header_profile_name">Cristhian C. Gómez N.</string>
+    <string name="nav_header_profile_username">\@camilogo1200</string>
+</resources>

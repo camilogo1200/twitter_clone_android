@@ -1,2 +1,10 @@
 rootProject.name= "mPTwitterClone"
 include(":app")
+include(":feed")
+include(":spaces")
+include(":inbox")
+include(":notifications")
+include(":common")
+include(":settings")
+include(":Search")
+include(":ui-resources")

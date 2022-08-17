@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/feed_navigation">
+
+    <include app:graph="@navigation/feed_navigation_graph" />
+    <include app:graph="@navigation/spaces_navigation_graph" />
+    <include app:graph="@navigation/search_navigation_graph" />
+    <include app:graph="@navigation/notifications_navigation_graph" />
+    <include app:graph="@navigation/inbox_navigation_graph" />
+
+    <action
+        android:id="@+id/to_feed_action"
+        app:destination="@+id/feed_navigation" />
+
+    <action
+        android:id="@+id/to_spaces_global_action"
+        app:destination="@+id/spaces_navigation_graph" />
+
+
+</navigation>
