@@ -53,6 +53,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.5.0")
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.google.ar:core:1.25.0")
     //Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
@@ -60,7 +61,20 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     testImplementation("io.mockk:mockk:1.12.5")
     testImplementation("org.mockito:mockito-core:4.7.0")
+    // For Robolectric tests.
+    testImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    // ...with Kotlin.
+    kaptTest("com.google.dagger:hilt-android-compiler:2.38.1")
+    // ...with Java.
+    testAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
 
+
+    // For instrumented tests.
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    // ...with Kotlin.
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
+    // ...with Java.
+    androidTestAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
     val nav_version = "2.5.1"
 
     // Kotlin
