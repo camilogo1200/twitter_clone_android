@@ -58,6 +58,9 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+    testImplementation("io.mockk:mockk:1.12.5")
+    testImplementation("org.mockito:mockito-core:4.7.0")
+
     val nav_version = "2.5.1"
 
     // Kotlin
