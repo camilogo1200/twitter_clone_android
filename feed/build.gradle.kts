@@ -87,8 +87,15 @@ dependencies {
     // Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
 
+    //3rd party libs
     implementation("com.mikhaellopez:circularimageview:4.3.0")
     implementation("com.google.android.material:material:1.6.1")
+    implementation("com.squareup.picasso:picasso:2.8")
+
+    val mediaVersion = "1.0.0-beta02"
+    implementation("androidx.media3:media3-exoplayer:$mediaVersion")
+    implementation("androidx.media3:media3-ui:$mediaVersion")
+    implementation("androidx.media3:media3-exoplayer-dash:$mediaVersion")
 
     val hilt_version = "2.43.2"
     //DI - hilt

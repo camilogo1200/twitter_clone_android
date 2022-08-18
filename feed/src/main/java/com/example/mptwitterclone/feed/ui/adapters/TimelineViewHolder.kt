@@ -1,14 +1,26 @@
 package com.example.mptwitterclone.feed.ui.adapters
 
+import android.widget.ImageView
+import androidx.core.view.isVisible
+import androidx.media3.common.MediaItem
+import androidx.media3.common.MimeTypes
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mptwitterclone.common.DateUtils
 import com.example.mptwitterclone.feed.R
 import com.example.mptwitterclone.feed.databinding.TweetItemBinding
 import com.example.mptwitterclone.feed.domain.models.Tweet
+import com.squareup.picasso.Picasso
 import java.util.*
 
 class TweetViewHolder(databinding: TweetItemBinding) : RecyclerView.ViewHolder(databinding.root) {
     val binding: TweetItemBinding = databinding
+
+    private var player: ExoPlayer? = null
+    private var playWhenReady = false
+    private var currentItem = 0
+    private var playbackPosition = 0L
 
     fun bind(
         tweet: Tweet,
@@ -39,8 +51,27 @@ class TweetViewHolder(databinding: TweetItemBinding) : RecyclerView.ViewHolder(d
         binding.profileNameText.text = "${tweet.user.firstName} ${tweet.user.lastName}"
         binding.profileUsernameText.text = tweet.user.userName
         val resource = getImageResource()
-
         binding.profileImage.setImageResource(resource)
+        tweet.image?.let {
+            loadImage(binding.tweetImage, tweet.image)
+        }
+        loadVideo(tweet)
+    }
+
+    private fun loadVideo(tweet: Tweet) {
+        if (tweet.video == null) {
+            binding.tweetVideoView.isVisible = false
+        } else {
+            tweet.video?.let {
+                initializePlayer(tweet.video)
+            }
+        }
+    }
+
+    private fun loadImage(view: ImageView?, url: String) {
+        view?.let {
+            Picasso.get().load(url).into(view);
+        }
     }
 
     private fun getImageResource(): Int {
@@ -79,5 +110,27 @@ class TweetViewHolder(databinding: TweetItemBinding) : RecyclerView.ViewHolder(d
             imageView.setOnClickListener { moreOptions?.invoke(tweet) }
         }
     }
+
+    private fun initializePlayer(uri: String) {
+        val trackSelector = DefaultTrackSelector(binding.root.context).apply {
+            setParameters(buildUponParameters().setMaxVideoSizeSd())
+        }
+        player = ExoPlayer.Builder(binding.root.context)
+            .setTrackSelector(trackSelector)
+            .build()
+            .also { exoPlayer ->
+                binding.tweetVideoView.player = exoPlayer
+                val mediaItem = MediaItem.Builder()
+                    .setUri(uri)
+                    .setMimeType(MimeTypes.APPLICATION_MPD)
+                    .build()
+                exoPlayer.setMediaItem(mediaItem)
+                exoPlayer.playWhenReady = playWhenReady
+                exoPlayer.volume = 0F
+                exoPlayer.seekTo(currentItem, playbackPosition)
+                exoPlayer.prepare()
+            }
+    }
+
 
 }

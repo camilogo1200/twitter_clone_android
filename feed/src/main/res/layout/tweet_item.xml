@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@color/extra_extra_light_grey">
+        android:background="@android:color/white">
 
         <View
             android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:contentDescription=""
             app:civ_border_width="0dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,34 +32,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="John Doe McTweeter"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/profile_image"
-            app:layout_constraintTop_toTopOf="@id/profile_image" />
+            app:layout_constraintTop_toTopOf="@id/profile_image"
+            tools:text="John Doe McTweeter" />
 
         <TextView
             android:id="@+id/profile_username_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="@camilogo1200"
             android:textColor="@color/dark_grey"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/profile_name_text"
-            app:layout_constraintTop_toTopOf="@id/profile_name_text" />
+            app:layout_constraintTop_toTopOf="@id/profile_name_text"
+            tools:text="@camilogo1200" />
 
         <TextView
             android:id="@+id/time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="10h"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/profile_username_text"
-            app:layout_constraintTop_toTopOf="@id/profile_username_text" />
+            app:layout_constraintTop_toTopOf="@id/profile_username_text"
+            tools:text="10h" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -76,28 +76,50 @@
             android:id="@+id/tweet_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:minHeight="40dp"
-            android:text="This is an example tweet!"
+            android:layout_marginTop="8dp"
+            android:minHeight="30dp"
             android:textColor="@color/black"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/profile_name_text"
             app:layout_constraintTop_toBottomOf="@+id/profile_name_text"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="This is an example tweet!" />
 
+        <ImageView
+            android:id="@+id/tweet_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tweet_text"
+            app:layout_constraintHeight_max="350dp"
+            app:layout_constraintStart_toStartOf="@id/tweet_text"
+            app:layout_constraintTop_toBottomOf="@id/tweet_text"
+            tools:src="@drawable/placeholder_image_unsplash" />
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/tweet_video_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tweet_text"
+            app:layout_constraintHeight_max="300dp"
+            app:layout_constraintStart_toStartOf="@id/tweet_text"
+            app:layout_constraintTop_toBottomOf="@id/tweet_text" />
 
         <TextView
             android:id="@+id/comment_tweet_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:drawableStart="@drawable/ic_message_circle"
             android:drawablePadding="8dp"
             android:gravity="center"
-            android:text="1,250"
             android:textAlignment="center"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -105,8 +127,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="@id/profile_name_text"
-            app:layout_constraintTop_toBottomOf="@+id/tweet_text"
-            app:layout_constraintVertical_bias="0.51" />
+            tools:text="1,250" />
 
         <TextView
             android:id="@+id/retweet_btn"
@@ -118,10 +139,10 @@
             android:text="1,094"
             android:textAlignment="center"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/comment_tweet_btn"
             app:layout_constraintEnd_toStartOf="@id/love_tweet_btn"
             app:layout_constraintStart_toEndOf="@id/comment_tweet_btn"
-            app:layout_constraintTop_toBottomOf="@+id/tweet_text" />
+            app:layout_constraintTop_toTopOf="@+id/comment_tweet_btn" />
 
         <TextView
             android:id="@+id/love_tweet_btn"
@@ -133,11 +154,11 @@
             android:text="1,094"
             android:textAlignment="center"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/retweet_btn"
             app:layout_constraintEnd_toStartOf="@id/share_tweet_btn"
             app:layout_constraintStart_toEndOf="@id/retweet_btn"
-            app:layout_constraintTop_toBottomOf="@+id/tweet_text"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/retweet_btn"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/share_tweet_btn"
@@ -149,10 +170,10 @@
             android:text=""
             android:textAlignment="center"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="@+id/love_tweet_btn"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@id/love_tweet_btn"
-            app:layout_constraintTop_toBottomOf="@+id/tweet_text"
+            app:layout_constraintTop_toTopOf="@+id/love_tweet_btn"
             app:layout_constraintVertical_bias="0.0" />
 
 

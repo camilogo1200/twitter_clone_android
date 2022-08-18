@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tweet_creation_navigation_graph"
+    app:startDestination="@id/tweetCreationFragment">
+
+    <fragment
+        android:id="@+id/tweetCreationFragment"
+        android:name="com.example.mptwitterclone.tweetcreation.ui.fragments.TweetCreationFragment"
+        android:label="fragment_tweet_creation"
+        tools:layout="@layout/fragment_tweet_creation" />
+</navigation>

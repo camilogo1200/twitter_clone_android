@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.mptwitterclone.common.showSnackBarError
 import com.example.mptwitterclone.feed.Datasource
 import com.example.mptwitterclone.feed.R
@@ -36,7 +37,20 @@ class FeedFragment : Fragment() {
         val timeline = Datasource(requireContext()).getTimeline()
         bindObservers()
         bindAdapter()
+        bindListeners()
         viewmodel.initView()
+    }
+
+    private fun bindListeners() {
+        binding.newTweet.setOnClickListener {
+            navigateToTweetCreation()
+        }
+    }
+
+    private fun navigateToTweetCreation() {
+
+        val navController = findNavController()
+        //navController.navigate()
     }
 
     private fun bindAdapter() {

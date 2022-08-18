@@ -9,6 +9,7 @@
     <include app:graph="@navigation/search_navigation_graph" />
     <include app:graph="@navigation/notifications_navigation_graph" />
     <include app:graph="@navigation/inbox_navigation_graph" />
+    <include app:graph="@navigation/tweet_creation_navigation_graph" />
 
     <action
         android:id="@+id/to_feed_action"
@@ -17,6 +18,10 @@
     <action
         android:id="@+id/to_spaces_global_action"
         app:destination="@+id/spaces_navigation_graph" />
+
+    <action
+        android:id="@+id/to_tweet_creation_global_action"
+        app:destination="@+id/tweet_creation_navigation_graph" />
 
 
 </navigation>

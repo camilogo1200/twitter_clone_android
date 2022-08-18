@@ -17,11 +17,10 @@
 <resources>
     <color name="colorPrimary">#1DA1F2</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#1DA1F2</color>
 
     <!-- twitter colors -->
     <color name="blue">#1DA1F2</color>
-
     <color name="black">#14171A</color>
     <color name="dark_grey">#657786</color>
     <color name="light_grey">#AAB8C2</color>
@@ -37,6 +36,14 @@
     <color name="lime">#aeea00</color>
     <color name="teal">#00bfa5</color>
     <color name="cyan">#00e5ff</color>
+    <color name="indigo">#304ffe</color>
+    <color name="light_green">#64dd17</color>
+    <color name="yellow">#ffea00</color>
+    <color name="amber">#ffc400</color>
+    <color name="orange">#ff6d00</color>
+    <color name="deep_orange">#ff3d00</color>
+    <color name="grey">#616161</color>
+    <color name="grey_2">#424242</color>
 
 
 </resources>

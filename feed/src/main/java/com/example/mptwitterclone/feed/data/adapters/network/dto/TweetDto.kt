@@ -4,13 +4,22 @@ import com.example.mptwitterclone.feed.domain.models.Tweet
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class TweetDto(val id: String, val user: UserDto, val text: String, val time: Long) {
+data class TweetDto(
+    val id: String,
+    val user: UserDto,
+    val text: String,
+    val time: Long,
+    val image: String? = null,
+    val video: String? = null
+) {
     fun fromModel(tweet: Tweet): TweetDto {
         return TweetDto(
             tweet.id,
             UserDto.fromModel(tweet.user),
             tweet.text,
-            tweet.time
+            tweet.time,
+            tweet.image,
+            tweet.video
         )
     }
 
@@ -19,7 +28,9 @@ data class TweetDto(val id: String, val user: UserDto, val text: String, val tim
             id,
             user.toModel(),
             text,
-            time
+            time,
+            image,
+            video
         )
     }
 }

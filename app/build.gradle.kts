@@ -62,6 +62,7 @@ dependencies {
     implementation(project(":Search"))
     implementation(project(":inbox"))
     implementation(project(":notifications"))
+    implementation(project(":tweetCreation"))
 
     implementation(project(":common"))
     implementation(project(":ui-resources"))
