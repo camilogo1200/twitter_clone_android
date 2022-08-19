@@ -10,6 +10,7 @@
     <include app:graph="@navigation/notifications_navigation_graph" />
     <include app:graph="@navigation/inbox_navigation_graph" />
     <include app:graph="@navigation/tweet_creation_navigation_graph" />
+    <include app:graph="@navigation/profile_navigation_graph" />
 
     <action
         android:id="@+id/to_feed_action"

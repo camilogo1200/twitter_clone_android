@@ -63,6 +63,7 @@ dependencies {
     implementation(project(":inbox"))
     implementation(project(":notifications"))
     implementation(project(":tweetCreation"))
+    implementation(project(":profile"))
 
     implementation(project(":common"))
     implementation(project(":ui-resources"))
@@ -71,6 +72,8 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.5.0")
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+
     //Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
@@ -97,7 +100,7 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     //serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
     val kotlin_coroutines = "1.6.4"
     //COROUTINES

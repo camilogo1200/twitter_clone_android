@@ -37,20 +37,7 @@ class FeedFragment : Fragment() {
         val timeline = Datasource(requireContext()).getTimeline()
         bindObservers()
         bindAdapter()
-        bindListeners()
         viewmodel.initView()
-    }
-
-    private fun bindListeners() {
-        binding.newTweet.setOnClickListener {
-            navigateToTweetCreation()
-        }
-    }
-
-    private fun navigateToTweetCreation() {
-
-        val navController = findNavController()
-        //navController.navigate()
     }
 
     private fun bindAdapter() {
