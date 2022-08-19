@@ -7,7 +7,7 @@
         android:id="@+id/group1"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/profile_navigation_graph"
             android:icon="@drawable/ic_person_outline_24"
             android:title="@string/menu_profile" />
         <item

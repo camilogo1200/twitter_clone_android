@@ -69,18 +69,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun bindListeners() {
-//        val drawerLayout = binding.drawerLayout
-//        binding.mainContent.toolbar.profileImage.setOnClickListener {
-//            with(drawerLayout) {
-//                if (isOpen) close() else open()
-//            }
-//        }
+        setupToolbarBehaviour()
+        binding.mainContent.fabNewTweet.setOnClickListener {
+            navController.navigate(R.id.to_tweet_creation_global_action)
+        }
+    }
 
-//        binding.navigationView.setNavigationItemSelectedListener {
-//            drawerLayout.close()
-//            it.isChecked = true
-//            true
-//        }
+    private fun setupToolbarBehaviour() {
+        binding.mainContent.toolbar.profileImage.setOnClickListener {
+            with(binding.drawerLayout) {
+                if (isOpen) close() else open()
+            }
+        }
     }
 
     private fun hideTweetCreation(isVisible: Boolean) {

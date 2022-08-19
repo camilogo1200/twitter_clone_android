@@ -14,15 +14,27 @@
 
     <action
         android:id="@+id/to_feed_action"
-        app:destination="@+id/feed_navigation" />
+        app:destination="@+id/feed_navigation"
+        app:enterAnim="@anim/enter_slide"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/enter_slide"
+        app:popExitAnim="@anim/fade_out" />
 
     <action
         android:id="@+id/to_spaces_global_action"
-        app:destination="@+id/spaces_navigation_graph" />
+        app:destination="@+id/spaces_navigation_graph"
+        app:enterAnim="@anim/enter_slide"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/enter_slide"
+        app:popExitAnim="@anim/fade_out" />
 
     <action
         android:id="@+id/to_tweet_creation_global_action"
-        app:destination="@+id/tweet_creation_navigation_graph" />
+        app:destination="@+id/tweet_creation_navigation_graph"
+        app:enterAnim="@anim/enter_slide"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/enter_slide"
+        app:popExitAnim="@anim/fade_out" />
 
 
 </navigation>
