@@ -81,7 +81,7 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     //serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
     val kotlin_coroutines = "1.6.4"
     //COROUTINES
