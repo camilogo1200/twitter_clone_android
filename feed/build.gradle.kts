@@ -88,7 +88,7 @@ dependencies {
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
 
     //3rd party libs
-    implementation("com.mikhaellopez:circularimageview:4.3.0")
+    implementation("com.mikhaellopez:circularimageview:4.3.1")
     implementation("com.google.android.material:material:1.6.1")
     implementation("com.squareup.picasso:picasso:2.8")
 
