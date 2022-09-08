@@ -60,7 +60,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
-    val nav_version = "2.5.1"
+    val nav_version = "2.5.2"
 
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
