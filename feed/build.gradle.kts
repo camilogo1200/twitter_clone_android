@@ -60,7 +60,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     testImplementation("io.mockk:mockk:1.12.5")
-    testImplementation("org.mockito:mockito-core:4.7.0")
+    testImplementation("org.mockito:mockito-core:4.8.0")
     // For Robolectric tests.
     testImplementation("com.google.dagger:hilt-android-testing:2.38.1")
     // ...with Kotlin.
