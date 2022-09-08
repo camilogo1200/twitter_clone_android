@@ -75,7 +75,7 @@ dependencies {
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
     // ...with Java.
     androidTestAnnotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
-    val nav_version = "2.5.1"
+    val nav_version = "2.5.2"
 
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
