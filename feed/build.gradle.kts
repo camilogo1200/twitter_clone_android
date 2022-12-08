@@ -53,7 +53,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.5.0")
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.ar:core:1.25.0")
+    implementation("com.google.ar:core:1.35.0")
     //Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
