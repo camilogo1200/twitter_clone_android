@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 
 plugins {
     id("com.android.library")
-    id("org.jlleitschuh.gradle.ktlint") version "10.3.0"
+    id("org.jlleitschuh.gradle.ktlint") version "11.1.0"
     kotlin("android")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
